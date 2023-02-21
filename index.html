@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px solid black">
+        <tr>
+            <th>City</th>
+            <th>Company</th>
+            <th>Package</th>
+        </tr>
+        <tr>
+            <td id="i1">&nbsp</td>
+            <td id="i2">&nbsp</td>
+            <td id="i3">&nbsp</td>
+        </tr>
+        <tr>
+            <th colspan="3"><button onclick="function1()">Know your placement</button></th>
+        </tr>
+    </table>
+    <script>
+        function function1(){
+            var super_dream_companies;
+super_dream_companies = {
+  "Google": ["Bangalore", "Hyderabad", "Mumbai"],
+  "Amazon": ["Bangalore", "Hyderabad", "Chennai"],
+  "Microsoft": ["Bangalore", "Hyderabad", "Pune"],
+  "Facebook": ["Mumbai", "Hyderabad"],
+  "Uber": ["Bangalore", "Gurgaon"],
+  "Adobe": ["Noida", "Bangalore"],
+  "Goldman Sachs": ["Bengaluru", "Mumbai"],
+  "Visa": ["Chennai", "Bengaluru"],
+  "JP Morgan": ["Mumbai", "Bengaluru"],
+  "LinkedIn": ["Bangalore"],
+  "Salesforce": ["Hyderabad", "Bengaluru"],
+  "PayPal": ["Chennai", "Bengaluru"],
+  "American Express": ["Gurgaon", "Bengaluru"],
+  "Nvidia": ["Pune", "Bengaluru"],
+  "SAP": ["Bangalore", "Pune"],
+  "Intel": ["Bengaluru"],
+  "Cisco": ["Bangalore"],
+  "Dell": ["Hyderabad", "Bengaluru"],
+  "IBM": ["Pune", "Bengaluru", "Hyderabad"],
+  "Oracle": ["Mumbai", "Bengaluru"],
+  "Walmart Global Tech": ["Bangalore", "Hyderabad", "Chennai"],
+  "Walls Frago": ["Bangalore", "Hyderabad", "Chennai"],
+  "CitiBank": ["Pune", "Chennai"],
+  "DE Shaw": ["Hyderabad"],
+  "AirBNB": ["Gurgaon", "Other"],
+  "Mc Kinsey": ["Mumbai", "Bangalore", "Chennai"],
+  "Morgan Stanley": ["Mumbai", "Bangalore"],
+  "Palo Alto": ["Bangalore"],
+  "Other": ["Other"]
+};
+var dream_companies;
+dream_companies = {
+  "Infosys": ["Chennai", "Bengaluru", "Pune", "Hyderabad"],
+  "TCS": ["Mumbai", "Bengaluru", "Pune", "Chennai", "Hyderabad"],
+  "Wipro": ["Delhi", "Bengaluru", "Hyderabad"],
+  "HCL": ["Noida", "Chennai"],
+  "Tech Mahindra": ["Pune", "Bengaluru", "Chennai"],
+  "Capgemini": ["Bengaluru", "Hyderabad", "Chennai"],
+  "Cognizant": ["Hyderabad", "Bengaluru", "Chennai"],
+  "Accenture": ["Chennai", "Bengaluru", "Hyderabad"],
+  "Mindtree": ["Bengaluru"],
+  "Persistent Systems": ["Pune", "Bengaluru"],
+  "L&T Infotech": ["Mumbai", "Bengaluru", "Pune"],
+  "Hexaware": ["Navi Mumbai", "Bengaluru"],
+  "Mphasis": ["Bengaluru", "Pune"],
+  "NIIT Technologies": ["Noida", "Greater Noida"],
+  "KPIT Technologies": ["Pune"],
+  "CGI": ["Hyderabad", "Bengaluru"],
+  "IGATE": ["Bengaluru"],
+  "Zensar Technologies": ["Pune"],
+  "Syntel": ["Mumbai", "Pune"],
+  "Infosys BPM": ["Jaipur"],
+  "Zoho": ["Chennai"],
+  "Other": ["Other"]
+};
+const placement = ["superdream", "dream"]
+var x = Math.floor(Math.random()*placement.length);
+if(x==0){
+    var keys = [];
+    for (var key in super_dream_companies) {
+  if (super_dream_companies.hasOwnProperty(key)) {
+    keys.push(key);
+  }
+}
+  var y = Math.floor(Math.random()*keys.length);
+  var company = keys[y];
+  var z = super_dream_companies[company];
+  var l = z.length;
+  var num = Math.floor(Math.random()*l);
+  var city = z[num];
+  document.getElementById("i1").innerHTML = city;
+  document.getElementById("i2").innerHTML = company;
+  var package = Math.floor(Math.random()*81)+10;
+  document.getElementById("i3").innerHTML = package.toString()+" "+"lakhs";
+}
+else{
+    var keys = []
+    for (var key in dream_companies) {
+  if (dream_companies.hasOwnProperty(key)) {
+    keys.push(key);
+  }
+}
+  var y = Math.floor(Math.random()*keys.length);
+  var company = keys[y];
+  var z = super_dream_companies[company];
+  var l = z.length;
+  var num = Math.floor(Math.random()*l);
+  var city = z[num];
+  document.getElementById("i1").innerHTML = city;
+  document.getElementById("i2").innerHTML = company;
+  var package = Math.floor(Math.random()*11)+5;
+  document.getElementById("i3").innerHTML = package.toString()+" "+"lakhs";
+}
+
+}
+
+
+</script>
+</body>
+</html>
